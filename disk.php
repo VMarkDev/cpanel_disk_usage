@@ -6,7 +6,7 @@ $domain = "mydomain.com";
 $port = "2083"; //protocol use https
 
 // query
-$query =  $domain. ":". $port. "/ Json-api / cpanel? Cpanel_jsonapi_user = user & cpanel_jsonapi_apiversion = 2 & cpanel_jsonapi_module = DiskUsage & cpanel_jsonapi_func = fetchdiskusagewithextras";
+$query = $domain.":".$port."/json-api/cpanel?cpanel_jsonapi_user=user&cpanel_jsonapi_apiversion=2&cpanel_jsonapi_module=DiskUsage&cpanel_jsonapi_func=fetchdiskusagewithextras";
 
 // Consult
 $curl = curl_init();
@@ -23,9 +23,7 @@ if ($result == false) {
 }
 curl_close($curl);
 
-
-
-// prin in json
+// print in json
 // print $result;
 
 
